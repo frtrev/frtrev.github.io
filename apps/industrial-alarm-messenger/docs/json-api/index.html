@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Authenticated JSON TCP API for Industrial Alarm Messenger.">
+  <title>JSON TCP API | Industrial Alarm Messenger</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header><div class="shell nav"><a class="brand" href="/">Neo<span>TheOne</span></a><nav><a href="/apps/industrial-alarm-messenger/">App documents</a><a aria-current="page" href="/apps/industrial-alarm-messenger/docs/json-api/">JSON API</a></nav></div></header>
+  <main class="shell"><article class="document">
+    <div class="breadcrumbs"><a href="/">Products</a> / <a href="/apps/industrial-alarm-messenger/">Industrial Alarm Messenger</a> / JSON API</div>
+    <p class="eyebrow">Version 1.0</p><h1>JSON TCP API</h1>
+    <h2>Transport</h2>
+    <p>Connect by TCP/IPv4 to the configured private address and port, default <code>5050</code>. Each request and response is one UTF-8 JSON object terminated by LF. Frames may arrive fragmented. Maximum frame size is 65,536 bytes.</p>
+    <p>Every request requires an API key, unique request ID, ISO-8601 timestamp within the configured tolerance, and a known command.</p>
+    <pre><code>{
+  "apiKey": "base64url-secret",
+  "requestId": "mill-7-000042",
+  "timestamp": "2026-07-26T03:12:25Z",
+  "command": "sendAlarm",
+  "groupId": "maintenance",
+  "priority": "critical",
+  "message": "Rolling Mill Cooling Water Pressure LOW"
+}</code></pre>
+    <div class="notice">Keep the API key secret, restrict allowed CIDRs, synchronize clocks, and never expose the TCP listener to the public Internet.</div>
+    <h2>Commands</h2>
+    <ul><li><code>ping</code> — connectivity and server time</li><li><code>status</code> — readiness and daily statistics</li><li><code>sendAlarm</code> — send an alarm to an enabled group</li><li><code>listGroups</code> and <code>getGroup</code> — inspect enabled group configuration</li><li><code>getStatistics</code> — sent, failed, and total daily counts</li><li><code>createGroup</code>, <code>updateGroup</code>, <code>deleteGroup</code>, and <code>exportLogs</code> — require <code>adminPin</code></li></ul>
+    <h2>Alarm priorities</h2>
+    <p><code>information</code>, <code>warning</code>, <code>critical</code>, and <code>emergency</code>. Messages are limited to 1,600 characters. Telephone numbers are never accepted by <code>sendAlarm</code>.</p>
+    <h2>Group fields</h2>
+    <p><code>groupId</code> and each member’s E.164 <code>phoneNumber</code> are required. Group name, description, member name, and member role are optional and may be blank.</p>
+    <h2>Common errors</h2>
+    <p><code>missing_credentials</code>, <code>invalid_api_key</code>, <code>unauthorized_ip</code>, <code>expired_timestamp</code>, <code>duplicate_request</code>, <code>malformed_json</code>, <code>unknown_command</code>, <code>administrator_required</code>, <code>group_not_found</code>, <code>group_unavailable</code>, <code>no_recipients</code>, and <code>invalid_priority</code>.</p>
+  </article></main>
+  <footer><div class="shell"><span>Industrial Alarm Messenger · JSON TCP API</span><a href="/apps/industrial-alarm-messenger/support/">Support</a></div></footer>
+</body>
+</html>
+
