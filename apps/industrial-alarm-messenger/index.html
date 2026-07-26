@@ -7,13 +7,17 @@
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-  <header><div class="shell nav"><a class="brand" href="/">Neo<span>TheOne</span></a><nav><a href="/">Products</a><a aria-current="page" href="/apps/industrial-alarm-messenger/">Industrial Alarm Messenger</a></nav></div></header>
+  <header><div class="shell nav"><a class="brand" href="/">Neo<span>TheOne</span></a><nav><a href="/">Products</a><a aria-current="page" href="/apps/industrial-alarm-messenger/">Overview</a><a href="#screenshots">Screenshots</a><a href="#documents">Documents</a></nav></div></header>
   <main class="shell">
     <p class="eyebrow">Industrial utility · Android</p>
     <h1>Industrial Alarm Messenger</h1>
     <p class="lede">An authenticated, offline notification appliance that lets trusted PLC, SCADA, MES, utility, and local monitoring systems send group-based alarms through a dedicated Android phone.</p>
     <div class="notice"><strong>Designed for controlled industrial use.</strong> No advertising, analytics, cloud account, subscription, or external SMS gateway.</div>
-    <section class="showcase" aria-labelledby="app-preview-title">
+    <div class="actions">
+      <a class="button" href="#screenshots">View app screenshots</a>
+      <a class="button secondary" href="#documents">Legal and technical documents</a>
+    </div>
+    <section class="showcase" id="screenshots" aria-labelledby="app-preview-title">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Application preview</p>
@@ -61,7 +65,7 @@
       </div>
       <p class="gallery-note">Screenshots show representative test configuration. Authentication secrets are concealed.</p>
     </section>
-    <section class="grid">
+    <section class="grid" id="documents">
       <article class="card"><h2>Legal and privacy</h2><p>How local operational information is processed, retained, exported, and disclosed to the mobile carrier.</p><ul class="doc-list"><li><a href="/apps/industrial-alarm-messenger/privacy/">Privacy policy →</a></li><li><a href="/apps/industrial-alarm-messenger/safety/">Safety disclaimer →</a></li></ul></article>
       <article class="card"><h2>Support and documentation</h2><p>Commissioning guidance and the authenticated newline-delimited JSON protocol.</p><ul class="doc-list"><li><a href="/apps/industrial-alarm-messenger/support/">Support →</a></li><li><a href="/apps/industrial-alarm-messenger/docs/installation/">Installation →</a></li><li><a href="/apps/industrial-alarm-messenger/docs/json-api/">JSON API →</a></li></ul></article>
     </section>
