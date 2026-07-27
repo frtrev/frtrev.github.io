@@ -3,108 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official support, privacy, safety, and technical documentation for NeoTheOne apps and games.">
-  <title>NeoTheOne | Product documentation</title>
+  <meta name="description" content="Official product information, support, and public documents for NeoTheOne apps and games.">
+  <title>NeoTheOne | Apps and Games</title>
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
-<body class="hub">
+<body class="directory-page">
   <header>
     <div class="shell nav">
       <a class="brand" href="/">Neo<span>TheOne</span></a>
-      <nav aria-label="Main navigation">
-        <a aria-current="page" href="#products">Products</a>
-        <a href="#documents">Documents</a>
+      <nav aria-label="Product categories">
+        <a href="#general-apps">General Apps</a>
+        <a href="#industrial-apps">Industrial Apps</a>
+        <a href="#games">Games</a>
         <a href="mailto:ftrevino@yahoo.com">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="shell hub-hero">
-      <div class="hero-copy">
-        <div class="system-label"><span class="pulse"></span> Public documentation online</div>
-        <p class="eyebrow">NeoTheOne product center</p>
-        <h1>Apps built with purpose.<br><span>Documents built for clarity.</span></h1>
-        <p class="lede">The official home for product information, privacy policies, safety notices, support, and technical guides from Francisco Trevino under NeoTheOne.</p>
-        <div class="actions">
-          <a class="button" href="#products">Browse products</a>
-          <a class="button secondary" href="mailto:ftrevino@yahoo.com">Contact support</a>
-        </div>
-      </div>
-      <aside class="gateway-panel" aria-label="Documentation status">
-        <div class="panel-head"><span>Document gateway</span><span class="status-dot">Online</span></div>
-        <dl>
-          <div><dt>Products</dt><dd>2</dd></div>
-          <div><dt>Public pages</dt><dd>9</dd></div>
-          <div><dt>Access</dt><dd>Open</dd></div>
-          <div><dt>Tracking</dt><dd>None</dd></div>
-        </dl>
-        <p>Stable public references for app stores, users, engineering teams, and reviewers.</p>
-      </aside>
+  <main class="shell directory-main">
+    <section class="directory-intro">
+      <p class="eyebrow">Official product directory</p>
+      <h1>NeoTheOne Apps &amp; Games</h1>
+      <p class="lede">Choose a category to find product information, screenshots, privacy policies, support, and technical documentation.</p>
     </section>
 
-    <section class="shell hub-section" id="products">
-      <div class="section-heading">
-        <div><p class="eyebrow">Product directory</p><h2>Choose a product</h2></div>
-        <p>Every product keeps its policies and support material under a dedicated, permanent path.</p>
+    <nav class="category-nav" aria-label="Jump to a category">
+      <a href="#general-apps"><span>01</span>General Purpose Apps</a>
+      <a href="#industrial-apps"><span>02</span>Industrial Apps</a>
+      <a href="#games"><span>03</span>Games</a>
+    </nav>
+
+    <section class="category-section" id="general-apps">
+      <div class="category-heading">
+        <div><p class="category-number">01</p><h2>General Purpose Apps</h2></div>
+        <p>Everyday utilities and applications.</p>
       </div>
+      <div class="empty-category">
+        <strong>No applications listed yet</strong>
+        <span>Future general-purpose products will appear here.</span>
+      </div>
+    </section>
 
-      <div class="product-grid">
-        <article class="product-card alarm">
-          <div class="product-top">
-            <div class="product-mark" aria-hidden="true">IAM</div>
-            <span class="product-state"><i></i> Active</span>
-          </div>
-          <p class="meta">Industrial utility · Android</p>
+    <section class="category-section" id="industrial-apps">
+      <div class="category-heading">
+        <div><p class="category-number">02</p><h2>Industrial Apps</h2></div>
+        <p>Tools designed for automation, engineering, manufacturing, and facility operations.</p>
+      </div>
+      <article class="directory-card">
+        <div class="directory-card-main">
+          <p class="meta">Android · Industrial automation</p>
           <h3>Industrial Alarm Messenger</h3>
-          <p>An authenticated, offline TCP-to-SMS gateway for industrial automation and facility alarm notifications.</p>
-          <a class="primary-link" href="/apps/industrial-alarm-messenger/">Open product center <span>→</span></a>
-          <div class="quick-links" aria-label="Industrial Alarm Messenger documents">
-            <a href="/apps/industrial-alarm-messenger/privacy/">Privacy</a>
-            <a href="/apps/industrial-alarm-messenger/safety/">Safety</a>
-            <a href="/apps/industrial-alarm-messenger/support/">Support</a>
-            <a href="/apps/industrial-alarm-messenger/docs/installation/">Installation</a>
-            <a href="/apps/industrial-alarm-messenger/docs/json-api/">JSON API</a>
-          </div>
-        </article>
+          <p>An authenticated, offline TCP-to-SMS gateway for PLC, SCADA, MES, utility, maintenance, and facility alarm notifications.</p>
+          <a class="button" href="/apps/industrial-alarm-messenger/">View product</a>
+        </div>
+        <nav class="directory-links" aria-label="Industrial Alarm Messenger links">
+          <a href="/apps/industrial-alarm-messenger/#screenshots">Screenshots <span>→</span></a>
+          <a href="/apps/industrial-alarm-messenger/privacy/">Privacy policy <span>→</span></a>
+          <a href="/apps/industrial-alarm-messenger/safety/">Safety disclaimer <span>→</span></a>
+          <a href="/apps/industrial-alarm-messenger/support/">Support <span>→</span></a>
+          <a href="/apps/industrial-alarm-messenger/docs/installation/">Installation <span>→</span></a>
+          <a href="/apps/industrial-alarm-messenger/docs/json-api/">JSON API <span>→</span></a>
+        </nav>
+      </article>
+    </section>
 
-        <article class="product-card game">
-          <div class="product-top">
-            <div class="product-mark" aria-hidden="true">AI</div>
-            <span class="product-state"><i></i> Active</span>
-          </div>
-          <p class="meta">Game · Android</p>
+    <section class="category-section" id="games">
+      <div class="category-heading">
+        <div><p class="category-number">03</p><h2>Games</h2></div>
+        <p>Games published by NeoTheOne.</p>
+      </div>
+      <article class="directory-card compact">
+        <div class="directory-card-main">
+          <p class="meta">Android · Game</p>
           <h3>Arthropod Invasion</h3>
           <p>A privacy-friendly game with local-only settings and gameplay information, without advertising or analytics.</p>
-          <a class="primary-link" href="/apps/arthropod-invasion/">Open product center <span>→</span></a>
-          <div class="quick-links" aria-label="Arthropod Invasion documents">
-            <a href="/apps/arthropod-invasion/privacy/">Privacy policy</a>
-            <a href="mailto:ftrevino@yahoo.com?subject=Arthropod%20Invasion%20Support">Support</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="shell hub-section" id="documents">
-      <div class="section-heading">
-        <div><p class="eyebrow">Direct access</p><h2>Document index</h2></div>
-        <p>Jump straight to the public reference you need.</p>
-      </div>
-      <div class="document-grid">
-        <a href="/apps/industrial-alarm-messenger/privacy/"><span class="doc-code">IAM–01</span><strong>Privacy policy</strong><small>Industrial Alarm Messenger</small></a>
-        <a href="/apps/industrial-alarm-messenger/safety/"><span class="doc-code">IAM–02</span><strong>Safety disclaimer</strong><small>Industrial Alarm Messenger</small></a>
-        <a href="/apps/industrial-alarm-messenger/support/"><span class="doc-code">IAM–03</span><strong>Support</strong><small>Industrial Alarm Messenger</small></a>
-        <a href="/apps/industrial-alarm-messenger/docs/installation/"><span class="doc-code">IAM–04</span><strong>Installation</strong><small>Industrial Alarm Messenger</small></a>
-        <a href="/apps/industrial-alarm-messenger/docs/json-api/"><span class="doc-code">IAM–05</span><strong>JSON TCP API</strong><small>Industrial Alarm Messenger</small></a>
-        <a href="/apps/arthropod-invasion/privacy/"><span class="doc-code">AI–01</span><strong>Privacy policy</strong><small>Arthropod Invasion</small></a>
-      </div>
+          <a class="button" href="/apps/arthropod-invasion/">View game</a>
+        </div>
+        <nav class="directory-links" aria-label="Arthropod Invasion links">
+          <a href="/apps/arthropod-invasion/privacy/">Privacy policy <span>→</span></a>
+          <a href="mailto:ftrevino@yahoo.com?subject=Arthropod%20Invasion%20Support">Support <span>→</span></a>
+        </nav>
+      </article>
     </section>
   </main>
 
   <footer>
     <div class="shell">
       <span>© 2026 Francisco Trevino · NeoTheOne</span>
-      <span>Public documents · No cookies · No tracking</span>
+      <span>No cookies · No tracking</span>
       <a href="mailto:ftrevino@yahoo.com">ftrevino@yahoo.com</a>
     </div>
   </footer>
