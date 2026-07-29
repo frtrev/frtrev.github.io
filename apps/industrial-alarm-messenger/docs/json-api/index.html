@@ -28,12 +28,19 @@
     <ul><li><code>ping</code> — connectivity and server time</li><li><code>status</code> — readiness and daily statistics</li><li><code>sendAlarm</code> — send an alarm to an enabled group</li><li><code>listGroups</code> and <code>getGroup</code> — inspect enabled group configuration</li><li><code>getStatistics</code> — sent, failed, and total daily counts</li><li><code>createGroup</code>, <code>updateGroup</code>, <code>deleteGroup</code>, and <code>exportLogs</code> — require <code>adminPin</code></li></ul>
     <h2>Alarm priorities</h2>
     <p><code>information</code>, <code>warning</code>, <code>critical</code>, and <code>emergency</code>. Messages are limited to 1,600 characters. Telephone numbers are never accepted by <code>sendAlarm</code>.</p>
+    <h2>URLs in alarm messages</h2>
+    <p>Alarm URLs are disabled by default. An administrator may enable <strong>Allow local-network URLs in alarms</strong> under TCP and security rules for links to trusted local IBA trends or facility documents.</p>
+    <p>When enabled, each link must use <code>http</code> or <code>https</code>, use a canonical literal IPv4 address, use an RFC-private, link-local, or loopback destination, and match at least one administrator-configured allowed CIDR.</p>
+    <pre><code>{
+  "message": "IBA trend: https://192.168.68.20/trends/pump-4"
+}</code></pre>
+    <p>Public addresses, hostnames, <code>www</code> links, non-HTTP schemes, embedded user information, and disguised IPv4 forms are rejected before any SMS attempt. The response uses <code>url_not_allowed</code>, and the attempt is recorded as a security failure.</p>
+    <div class="notice">Validation covers the initial destination. Administrators must ensure trusted local servers do not redirect recipients to public or untrusted sites. Recipients need facility-network or authorized VPN access to open these links.</div>
     <h2>Group fields</h2>
     <p><code>groupId</code> and each member’s E.164 <code>phoneNumber</code> are required. Group name, description, member name, and member role are optional and may be blank.</p>
     <h2>Common errors</h2>
-    <p><code>missing_credentials</code>, <code>invalid_api_key</code>, <code>unauthorized_ip</code>, <code>expired_timestamp</code>, <code>duplicate_request</code>, <code>malformed_json</code>, <code>unknown_command</code>, <code>administrator_required</code>, <code>group_not_found</code>, <code>group_unavailable</code>, <code>no_recipients</code>, and <code>invalid_priority</code>.</p>
+    <p><code>missing_credentials</code>, <code>invalid_api_key</code>, <code>unauthorized_ip</code>, <code>expired_timestamp</code>, <code>duplicate_request</code>, <code>malformed_json</code>, <code>unknown_command</code>, <code>administrator_required</code>, <code>group_not_found</code>, <code>group_unavailable</code>, <code>no_recipients</code>, <code>invalid_priority</code>, and <code>url_not_allowed</code>.</p>
   </article></main>
   <footer><div class="shell"><span>Industrial Alarm Messenger · JSON TCP API</span><a href="/apps/industrial-alarm-messenger/support/">Support</a></div></footer>
 </body>
 </html>
-
