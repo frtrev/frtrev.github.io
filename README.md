@@ -11,7 +11,8 @@ technical documentation.
   `https://frtrev.github.io/apps/industrial-alarm-messenger/support/`
 - Arthropod Invasion privacy:
   `https://frtrev.github.io/apps/arthropod-invasion/privacy/`
+- Brick Breaker privacy:
+  `https://frtrev.github.io/apps/brick-breaker/privacy/`
 
 The legacy Arthropod Invasion Markdown policy remains at
 `/privacy/privacy-policy.md` for backward compatibility.
-
