@@ -13,6 +13,8 @@ technical documentation.
   `https://frtrev.github.io/apps/arthropod-invasion/privacy/`
 - Brick Breaker privacy:
   `https://frtrev.github.io/apps/brick-breaker/privacy/`
+- NeoTheOne copyright:
+  `https://frtrev.github.io/copyright/`
 
 The legacy Arthropod Invasion Markdown policy remains at
 `/privacy/privacy-policy.md` for backward compatibility.
