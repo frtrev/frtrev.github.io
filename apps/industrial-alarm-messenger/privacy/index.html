@@ -18,18 +18,20 @@
     <h2>Purpose</h2>
     <p>This information is used only to authenticate local alarm requests, route alarms to configured recipients, send SMS notifications, show operational status, prevent replay attacks, and maintain an administrator-visible audit history.</p>
     <h2>Storage and disclosure</h2>
-    <p>Information is stored locally in the app’s private Android storage. Alarm text and recipient telephone numbers are provided to the selected mobile carrier when Android sends an SMS. Data is otherwise disclosed only when an administrator explicitly exports audit logs or when facility-controlled device-management or backup software accesses application data.</p>
+    <p>Information is stored locally in the app’s private application storage on Android or iOS. Alarm text and recipient telephone numbers are provided to the selected mobile carrier when Android sends an SMS or an approved iPhone deployment uses Apple’s Critical Messaging API. Data is otherwise disclosed only when an administrator explicitly exports audit logs or when facility-controlled device-management or backup software accesses application data.</p>
     <h2>Permissions</h2>
     <ul>
-      <li><strong>SMS:</strong> sends requested industrial alarm notifications.</li>
-      <li><strong>Phone and SIM state:</strong> displays SIM readiness and supports administrator selection on dual-SIM devices.</li>
+      <li><strong>SMS on Android:</strong> sends requested industrial alarm notifications.</li>
+      <li><strong>Phone and SIM state on Android:</strong> displays SIM readiness and supports administrator selection on dual-SIM devices.</li>
       <li><strong>Network:</strong> accepts authenticated TCP connections on the facility’s local network.</li>
-      <li><strong>Notifications and foreground service:</strong> visibly keeps an administrator-started gateway active while its interface is backgrounded or the screen is off.</li>
-      <li><strong>Wake and Wi-Fi locks:</strong> maintain CPU and facility Wi-Fi availability while the gateway is running.</li>
+      <li><strong>Android notifications and foreground service:</strong> visibly keeps an administrator-started gateway active while its interface is backgrounded or the screen is off.</li>
+      <li><strong>Android wake and Wi-Fi locks:</strong> maintain CPU and facility Wi-Fi availability while the gateway is running.</li>
+      <li><strong>Critical Messaging on iOS:</strong> requests authorization for each enabled recipient and sends critical SMS only in Apple-approved deployments.</li>
+      <li><strong>Local Push Connectivity on iOS:</strong> lets an Apple-approved provider receive local alarm events while the main app is backgrounded.</li>
     </ul>
     <p>The app does not read contacts, call logs, incoming messages, photos, microphone data, camera data, or device location.</p>
     <h2>Retention and deletion</h2>
-    <p>Audit and configuration data remains on the device until an administrator clears it, Android application data is deleted, or the app is uninstalled. The deploying organization controls exported copies and their retention.</p>
+    <p>Audit and configuration data remains on the device until an administrator clears it, application data is deleted, or the app is uninstalled. The deploying organization controls exported copies and their retention.</p>
     <h2>Security and organizational responsibility</h2>
     <p>The app uses an API key, request identifiers, timestamp validation, source-network restrictions, and an administrator PIN. The deploying organization is responsible for recipient authorization, lawful SMS use, device and network security, retention, and access controls.</p>
     <h2>Children’s privacy</h2>
@@ -40,4 +42,3 @@
   <footer><div class="shell"><span>Industrial Alarm Messenger · Privacy Policy</span><a href="/apps/industrial-alarm-messenger/support/">Support</a></div></footer>
 </body>
 </html>
-

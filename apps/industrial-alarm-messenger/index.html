@@ -9,10 +9,15 @@
 <body>
   <header><div class="shell nav"><a class="brand" href="/">Neo<span>TheOne</span></a><nav><a href="/">Products</a><a aria-current="page" href="/apps/industrial-alarm-messenger/">Overview</a><a href="#screenshots">Screenshots</a><a href="#documents">Documents</a></nav></div></header>
   <main class="shell">
-    <p class="eyebrow">Industrial utility · Android</p>
+    <p class="eyebrow">Industrial utility · Android &amp; iOS</p>
     <h1>Industrial Alarm Messenger</h1>
-    <p class="lede">An authenticated, offline notification appliance that lets trusted PLC, SCADA, MES, utility, and local monitoring systems send group-based alarms through a dedicated Android phone.</p>
+    <p class="lede">An authenticated, local notification appliance that lets trusted PLC, SCADA, MES, utility, and facility monitoring systems send group-based alarms through a dedicated Android phone or an approved iPhone deployment.</p>
     <div class="notice"><strong>Designed for controlled industrial use.</strong> No advertising, analytics, cloud account, subscription, or external SMS gateway.</div>
+    <section class="grid" aria-label="Platform capabilities">
+      <article class="card"><h2>Android gateway</h2><p>Runs an authenticated TCP gateway as a visible foreground service and sends alarms through the device’s SMS service. Supports multipart messaging, SIM status, and dual-SIM selection.</p></article>
+      <article class="card"><h2>iPhone support</h2><p>Manages groups and recipient authorization and, on approved deployments, sends unattended SMS through Apple’s Critical Messaging API. Continuous background alarm intake uses Apple’s Local Push Connectivity provider.</p></article>
+    </section>
+    <div class="notice"><strong>iPhone deployment requirements.</strong> Critical SMS requires iOS 18.2 or newer, explicit authorization for each recipient, and Apple’s restricted Critical Messaging entitlement. Continuous local alarm intake while the app is backgrounded additionally requires Apple’s restricted Local Push Connectivity entitlement.</div>
     <div class="actions">
       <a class="button" href="#screenshots">View app screenshots</a>
       <a class="button secondary" href="#documents">Legal and technical documents</a>
@@ -23,7 +28,7 @@
           <p class="eyebrow">Application preview</p>
           <h2 id="app-preview-title">Built for the control room</h2>
         </div>
-        <p>A focused interface for gateway status, auditability, recipient groups, and secure commissioning.</p>
+        <p>A focused Android and iPhone interface for gateway status, auditability, recipient groups, authorization, and secure commissioning.</p>
       </div>
       <div class="screenshot-grid">
         <figure class="screenshot-card featured">
@@ -62,8 +67,26 @@
           </a>
           <figcaption><strong>Secure local settings</strong><span>Configure the endpoint, network allowlist, authentication, and device permissions.</span></figcaption>
         </figure>
+        <figure class="screenshot-card">
+          <a href="/assets/screenshots/industrial-alarm-messenger/iphone-dashboard.png" aria-label="Open full-size iPhone gateway dashboard screenshot">
+            <img loading="lazy" src="/assets/screenshots/industrial-alarm-messenger/iphone-dashboard.png" width="1284" height="2778" alt="Industrial Alarm Messenger running on iPhone with gateway status, local network information, counters, and Apple entitlement guidance">
+          </a>
+          <figcaption><strong>iPhone gateway status</strong><span>View local endpoint status, activity, and production entitlement readiness.</span></figcaption>
+        </figure>
+        <figure class="screenshot-card">
+          <a href="/assets/screenshots/industrial-alarm-messenger/iphone-groups.png" aria-label="Open full-size iPhone recipient group screenshot">
+            <img loading="lazy" src="/assets/screenshots/industrial-alarm-messenger/iphone-groups.png" width="1284" height="2778" alt="Industrial Alarm Messenger recipient group manager running on iPhone">
+          </a>
+          <figcaption><strong>Groups on iPhone</strong><span>Create and maintain local recipient groups using the same focused workflow.</span></figcaption>
+        </figure>
+        <figure class="screenshot-card">
+          <a href="/assets/screenshots/industrial-alarm-messenger/iphone-settings.png" aria-label="Open full-size iPhone settings screenshot">
+            <img loading="lazy" src="/assets/screenshots/industrial-alarm-messenger/iphone-settings.png" width="1284" height="2778" alt="iPhone settings showing the TCP endpoint, protected API key, network allowlist, Critical Messaging authorization, and background transport">
+          </a>
+          <figcaption><strong>Apple messaging controls</strong><span>Manage recipient authorization and see Local Push Connectivity deployment requirements.</span></figcaption>
+        </figure>
       </div>
-      <p class="gallery-note">Screenshots show representative test configuration. Authentication secrets are concealed.</p>
+      <p class="gallery-note">Android and iPhone screenshots show representative test configuration. Authentication secrets and production telephone numbers are concealed.</p>
     </section>
     <section class="grid" id="documents">
       <article class="card"><h2>Legal and privacy</h2><p>How local operational information is processed, retained, exported, and disclosed to the mobile carrier.</p><ul class="doc-list"><li><a href="/apps/industrial-alarm-messenger/privacy/">Privacy policy →</a></li><li><a href="/apps/industrial-alarm-messenger/safety/">Safety disclaimer →</a></li></ul></article>

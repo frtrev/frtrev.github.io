@@ -3,7 +3,9 @@
 Static GitHub Pages site for public product, support, privacy, safety, and
 technical documentation.
 
-## Stable Google Play URLs
+## Stable store and support URLs
+
+Industrial Alarm Messenger documentation covers both Android and approved iOS deployments.
 
 - Industrial Alarm Messenger privacy:
   `https://frtrev.github.io/apps/industrial-alarm-messenger/privacy/`
