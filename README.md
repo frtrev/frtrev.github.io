@@ -41,3 +41,17 @@ integration changes. Website email support does not replace in-app AI reporting.
 Publishing: commit and push the reviewed site changes through the existing
 GitHub Pages workflow, then confirm each public URL loads without a login before
 using it in Play Console. Local files alone do not establish that hosting is live.
+
+## LandO Password AutoFill
+
+`/.well-known/apple-app-site-association` associates this domain with the
+iOS app `C2M32YF6V7.app.neotheone.lando` for shared web credentials.
+`_config.yml` includes the hidden directory in GitHub Pages output.
+
+The app must include `webcredentials:frtrev.github.io` in its signed Associated
+Domains entitlement. Enable Associated Domains for the app identifier in Apple
+Developer and regenerate provisioning profiles if signing requires it. Install
+a newly signed build after the file is live; Apple may cache association files.
+Set the website on the saved LandO login in 1Password to
+`https://frtrev.github.io`. This association does not enable universal links
+or change authentication.

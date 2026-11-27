@@ -1,0 +1,3 @@
+# Publish Apple Password AutoFill association metadata.
+include:
+  - .well-known
