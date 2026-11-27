@@ -24,16 +24,26 @@ The legacy Arthropod Invasion Markdown policy remains at
 ## LandO
 
 - Product: `https://frtrev.github.io/apps/lando/`
-- Privacy (Play Console): `https://frtrev.github.io/apps/lando/privacy/`
+- Privacy (Play Console and App Store): `https://frtrev.github.io/apps/lando/privacy/`
 - Support: `https://frtrev.github.io/apps/lando/support/`
-- Local-data deletion help: `https://frtrev.github.io/apps/lando/support/#delete-data`
+- Account and local-data deletion help: `https://frtrev.github.io/apps/lando/support/#delete-data`
 - Planning limitations: `https://frtrev.github.io/apps/lando/safety/`
 
 These are static pages with no embedded forms, analytics or remote fonts. The
 screenshots use a synthetic example property, not user data. No store badge or
-live download claim is shown until the Play listing is available.
+live download claim is shown until the corresponding Play or App Store listing is available.
 
-The policy describes the current LandO build, including FormSubmit reporting.
+The LandO pages describe build 3 (1.0.0), with Android/iPhone/iPad support,
+Firebase email/password accounts, Free/Pro demo plans, managed Gemini AI,
+account-level AI consent, account-specific local storage, backups, temporary
+ruler measurements, tap-to-insert points and individually dismissible hints.
+The public policy is synchronized with the bundled app policy effective
+November 26, 2026. Legacy-provider policy links are retained for older versions.
+Account-deletion requests use the support email at
+`/apps/lando/support/#delete-account`; signing out does not delete an account.
+Screenshots are explicitly labeled as an earlier app version.
+
+The policy describes the current FormSubmit reporting integration.
 The owner approved a Google Form replacement, but its responder URL is still
 needed. Update both the bundled app policy and this public policy when that
 integration changes. Website email support does not replace in-app AI reporting.
