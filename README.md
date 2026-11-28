@@ -41,7 +41,14 @@ The public policy is synchronized with the bundled app policy effective
 November 26, 2026. Legacy-provider policy links are retained for older versions.
 Account-deletion requests use the support email at
 `/apps/lando/support/#delete-account`; signing out does not delete an account.
-Screenshots are explicitly labeled as an earlier app version.
+The gallery now contains 15 native simulator/emulator captures taken November
+27, 2026: five each for iPhone (1320 × 2868), iPad (2064 × 2752) and Android
+(1080 × 1920). They show the light map, saved layers, temporary ruler, updated
+sign-in and dark map. Originals are in `assets/lando/screenshots/`, grouped by
+device. The support page includes visual examples beside the relevant help.
+Images use synthetic property data, retain map attribution, and open at full
+resolution. The earlier `/assets/lando/property-map.png` and
+`/assets/lando/saved-layers.png` URLs now serve the refreshed Android captures.
 
 The policy describes the current FormSubmit reporting integration.
 The owner approved a Google Form replacement, but its responder URL is still
